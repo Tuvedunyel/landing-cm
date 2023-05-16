@@ -1,0 +1,62 @@
+.communication {
+    background-color: var(--bg-communication);
+    padding-block-start: 1.1rem;
+    padding-block-end: 3.7rem;
+    text-align: center;
+
+    & .logo img {
+        margin-inline: auto;
+        width: 11.8rem;
+        height: 6.1rem;
+        margin-block-end: 2.5rem;
+    }
+
+    & p {
+        position: relative;
+        line-height: calc(2.7 / 2);
+        margin-block-end: 4.3rem;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 13.3rem;
+            height: 2.3rem;
+            bottom: calc(-2.3rem - 1.4rem);
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url('../img/white-card-symbol-group.svg');
+            background-size: cover;
+        }
+    }
+
+    & h1 {
+        font-size: 4rem;
+        line-height: calc(45 / 40);
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .communication {
+        position: relative;
+        padding-block-start: 9.7rem;
+
+        & .logo img {
+            position: absolute;
+            top: 2rem;
+            left: 4rem;
+            
+        }
+        & p {
+            font-size: 4rem;
+            line-height: calc(53 / 40);
+            &::after {
+                bottom: calc(-2.3rem - 1.1rem);
+            }
+        }
+        & h1 {
+            font-size: 6rem;
+            width: 77.4rem;
+            margin-inline: auto;
+        }
+    }
+}

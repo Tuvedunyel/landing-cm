@@ -1,0 +1,42 @@
+header {
+    background-color: var(--bg-header);
+    & .header-container {
+        text-align: center;
+        color: var(--txt-white);
+        padding-block: 2.2rem;
+        line-height: calc(20 / 15);
+        & p {
+            font-size: 1.5rem;
+        }
+        & a {
+            font-weight: 500;
+            color: var(--txt-white);
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                height: 1.3rem;
+                width: 1.6rem;
+                top: 0.6rem;
+                left: calc(-1.6rem - 0.8rem);
+                background-image: url('../img/arrow.svg');
+                background-size: cover;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:60em) {
+    .header-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4.4rem;
+
+        & a::before {
+            height: 2rem;
+            width: 2.4rem;
+            left: calc(-2.4rem - 1.2rem);
+        }
+    }
+}

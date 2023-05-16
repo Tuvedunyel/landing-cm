@@ -1,0 +1,22 @@
+{
+  "name": "landing_cm_btg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compil": "sass scss:css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tuvedunyel/landing-cm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tuvedunyel/landing-cm/issues"
+  },
+  "homepage": "https://github.com/Tuvedunyel/landing-cm#readme",
+  "devDependencies": {
+    "sass": "^1.62.1"
+  }
+}
