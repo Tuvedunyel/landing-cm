@@ -1,29 +1,17 @@
 .container {
     width: 100%;
     margin-inline: auto;
-    padding-inline: 2.4rem;
+    padding-inline: 1rem;
 }
 
-@media screen and (min-width: 36em) {
-    .container {
-        max-width: 54rem;
-    }
-}
-
-@media screen and (min-width: 48em) {
-    .container {
-        max-width: 72rem;
-    }
-}
-
-@media screen and (min-width: 62em) {
+@media screen and (min-width: 64em) {
     .container {
         max-width: 96rem;
     }
 }
 
-@media screen and (min-width: 75em) {
-    .container {
-        max-width: 113.2rem;
-    }
-}
+// @media screen and (min-width: 120em) {
+//     .container {
+//         max-width: 113.2rem;
+//     }
+// }
