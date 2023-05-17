@@ -6,12 +6,7 @@
 
 @media screen and (min-width: 64em) {
     .container {
-        max-width: 96rem;
+        max-width: min(95%, 161.1rem);
     }
 }
 
-// @media screen and (min-width: 120em) {
-//     .container {
-//         max-width: 113.2rem;
-//     }
-// }

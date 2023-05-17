@@ -1,0 +1,51 @@
+.comments {
+    background-color: var(--bg-comments);
+    text-align: center;
+    padding-block-start: 7.3rem;
+    padding-block-end: 7.7rem;
+    @media screen and (min-width: 48em) {
+        padding-block-start: 7rem;
+        padding-block-end: 6.3rem;
+        padding-inline: 9.2rem;
+    }
+    p:first-of-type {
+        font-weight: 700;
+        font-size: 2.6rem;
+        line-height: calc(35 / 26);
+        position: relative;
+        margin-block-end: 6.3rem;
+        margin-inline: auto;
+        @media screen and (min-width: 48em) {
+            font-size: 3.8rem;
+            line-height: calc(51 / 38);
+            width: min(100%, 107rem);
+        }
+        @media screen and (min-width: 90em) {
+            font-size: 4.4rem;
+            line-height: calc(58 / 44);
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            width: 8.9rem;
+            height: 1.5rem;
+            left: 50%;
+            top:calc(100% + 3rem);
+            transform: translateX(-50%);
+            background-image: url('../img/black-card-symbol-group.svg');
+            background-size: cover;
+        }
+    }
+    span {
+        color: var(--span);
+    }
+    p:nth-child(2) {
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: calc(32 / 24);
+        @media screen and (min-width: 48em) {
+            font-size: 2.7rem;
+            line-height: calc(36 / 27);
+        }
+    }
+}

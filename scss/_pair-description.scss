@@ -1,0 +1,124 @@
+.pair-description,
+.brelan-description {
+    position: relative;
+
+    h3 {
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: calc(34 / 32);
+        margin-block-end: 0.6rem;
+
+        span {
+            color: var(--span);
+        }
+    }
+
+    img {
+        position: absolute;
+        bottom: calc(100% + 0.9rem);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    p:first-of-type {
+        font-weight: 300;
+        font-size: 3rem;
+        line-height: calc(47 / 30);
+        margin-block-end: 1.8rem;
+
+        span {
+            font-weight: 700;
+            font-size: 4.4rem;
+            line-height: calc(47 / 44);
+        }
+    }
+
+    .informations-sup {
+        font-weight: 300;
+        font-style: italic;
+        font-size: 1.5rem;
+        line-height: calc(22 / 15);
+        margin-block-end: 1.9rem;
+    }
+}
+
+.brelan-description {
+    h3 {
+        font-size: 3.5rem;
+        line-height: calc(37 / 35);
+        span {
+            color: var(--yellow) !important;
+        }
+    }    
+}
+
+.card-pair,
+.card-brelan {
+    background-color: var(--bg-card-offer);
+    border-radius: 1.2rem;
+    border: 0.2rem solid white;
+    margin-block-end: 1.3rem;
+
+    h4 {
+        color: var(--card-title);
+        font-weight: 700;
+        font-style: italic;
+        font-size: 1.6rem;
+        line-height: calc(47 / 16);
+        text-align: left;
+        padding-inline-start: 1.3rem;
+
+        span {
+            color: var(--span);
+        }
+    }
+
+    .list {
+        background-color: var(--bg-offers);
+        list-style-type: disc;
+        color: white;
+        padding-inline-start: 4rem;
+
+        .list-item {
+            text-align: left;
+            font-size: 1.6rem;
+            line-height: calc(47 / 16);
+            font-weight: 300;
+
+            span {
+                color: var(--span);
+                font-weight: 600;
+                line-height: calc(27 / 18);
+                em {
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
+
+.card-brelan {
+    h4,
+    .list-item {
+    font-size: 1.8rem !important;
+    }
+    
+}
+
+.link-pair,
+.link-brelan {
+    border: 0.2rem solid white;
+    border-radius: 4.9rem;
+    margin-inline: auto;
+    width: 28rem;
+    text-align: center;
+    padding-block: 1rem;
+
+    a {
+        line-height: calc(30 / 22);
+        font-size: 2.2rem;
+        text-decoration: none;
+        color: var(--txt-white);
+    }
+}

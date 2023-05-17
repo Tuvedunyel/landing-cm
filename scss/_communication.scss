@@ -4,14 +4,14 @@
     padding-block-end: 3.7rem;
     text-align: center;
 
-    & .logo img {
+    .logo img {
         margin-inline: auto;
         width: 11.8rem;
         height: 6.1rem;
         margin-block-end: 2.5rem;
     }
 
-    & p {
+    p {
         position: relative;
         line-height: calc(2.7 / 2);
         margin-block-end: 4.3rem;
@@ -29,34 +29,48 @@
         }
     }
 
-    & h1 {
+    h1 {
         font-size: 4rem;
         line-height: calc(45 / 40);
     }
 }
 
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 48em) {
     .communication {
         position: relative;
         padding-block-start: 9.7rem;
-
-        & .logo img {
+        .logo img {
             position: absolute;
             top: 2rem;
             left: 4rem;
             
         }
-        & p {
+        p {
             font-size: 4rem;
             line-height: calc(53 / 40);
             &::after {
                 bottom: calc(-2.3rem - 1.1rem);
             }
         }
-        & h1 {
+        h1 {
             font-size: 6rem;
+            line-height: 1;
             width: 77.4rem;
             margin-inline: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 120em) {
+    .communication {
+        padding-block-start: 7.1rem;
+        padding-block-end: 8.2rem;
+        .communication-container {
+            position: relative;
+            .logo img {
+                top: -5.1rem;
+                left: -11.5rem;
+            }
         }
     }
 }

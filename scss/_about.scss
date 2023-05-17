@@ -12,6 +12,9 @@
 
 .about-top {
     margin-block-end: 23.5rem;
+    @media screen and (min-width:48em) {
+        margin-block-end: 20rem;
+    }
 
     h2 {
         font-size: 3.6rem;
@@ -56,29 +59,60 @@
     
         h2 {
             margin-block-end: 7rem;
+            width: 70rem;
+            margin-inline: auto;
+            padding-inline-start: 4rem;
+            
             &::before {
-                width: 24rem;
-                height: 30rem;
+                width: 26rem;
+                height: 32rem;
                 top: -14rem;
-                left: 9rem;
+                left: 0rem;
                 background-image: url('../img/ace-card-simple@2x.png');
             }
     
             &::after {
                 width: 13.3rem;
                 height: 2.3rem;
-                top: calc(100% + 2.3rem);
-                left: 32%;
-                transform: translateX(-45%);
+                top: calc(4rem + 2.3rem);
+                left: 26rem;
+                transform: translateX(-95%);
             }
         }
     }  
 }
 
+@media screen and (min-width: 90em) {
+    .about-top h2 {
+        font-size: 4.4rem;
+        line-height: calc(58 / 44);
+        padding-inline-start: 0;
+        &::before {
+            top: -14rem;
+            left: -10rem;
+        }
+
+        &::after {
+            width: 13.3rem;
+            height: 2.3rem;
+            top: calc(4rem + 3.3rem);
+            left: 18.5rem;
+            transform: translateX(-95%);
+        }
+    }
+}
+
 .about-top>p:first-of-type {
     font-size: 1.8rem;
     @media screen and (min-width:64em) {
-        margin-inline-start: 25%;
+        margin-inline: auto;
+        width: 80rem;
+        font-size: 2rem;
+        line-height: calc(27 / 20);
+        padding-inline-start: 18.5rem;
+    }
+    @media screen and (min-width: 90em) {
+        padding-inline-start: 11rem;
     }
 }
 
@@ -87,7 +121,14 @@
     font-size: 2.5rem;
     font-weight: 700;
     @media screen and (min-width:64em) {
-        margin-inline-start: 25%;
+        margin-inline: auto;
+        width: 80rem;
+        font-size: 2.7rem;
+        line-height: calc(36 / 27);
+        padding-inline-start: 18.5rem;
+    }
+    @media screen and (min-width: 90em) {
+        padding-inline-start: 11rem;
     }
 }
 
@@ -95,9 +136,19 @@
     display: grid;
     gap: 20.6rem;
     margin-block-end: 5.4rem;
-    @media screen and (min-width:64em) {
+    @media screen and (min-width:48em) {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 3.6rem;
+        row-gap: 20rem;
+        width: min(100%, 80rem);
+        margin-inline: auto;
+    }
+    @media screen and (min-width: 64em) {
+        row-gap: 27.1rem;
+    }
+    @media screen and (min-width: 90em) {
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
     }
 }
 
@@ -106,12 +157,22 @@
 .clients,
 .picture {
     position: relative;
-    img {
+    picture {
         position: absolute;
         bottom: calc(85%);
         left: 50%;
         transform: translateX(-50%) rotate(-11deg);
         z-index: 2;
+        @media screen and (min-width: 64em) {
+            bottom: calc(83%);
+            transform: translateX(-68%) rotate(0);
+        }
+        img {
+            @media screen and (min-width: 64em) {
+                height: 31rem;
+                max-width: none;
+            }
+        }
     }
     .card-description {
         position: relative;
@@ -120,11 +181,20 @@
         padding-inline: 2rem;
         padding-block-start: 5.2rem;
         padding-block-end: 5.9rem;
+        @media screen and (min-width: 64em) {
+            padding-block-start: 4.7rem;
+            padding-block-end: 5rem;
+            border-radius: 4.9rem;
+        }
         h3 {
             font-size: 2.8rem;
             line-height: calc(34 / 28);
             color: var(--txt-white);
             margin-block-end: 1.5rem;
+            @media screen and (min-width: 64em) {
+                font-size: 3.2rem;
+                line-height: calc(34 / 32);
+            }
             span {
                 color: var(--span);
             }
@@ -133,6 +203,10 @@
             font-size: 1.6rem;
             line-height: calc(21 / 16);
             color: var(--txt-white);
+            @media screen and (min-width: 64em) {
+                font-size: 1.8rem;
+                line-height: calc(24 / 18);
+            }
         }
     }
 }
@@ -143,6 +217,10 @@
     padding-block: 2rem;
     text-align: center;
     position: relative;
+    @media screen and (min-width:64em) {
+        width: 46.7rem;
+        margin-inline: auto;
+    }
     a {
         text-decoration: none;
         color: var(--txt);
@@ -159,6 +237,11 @@
         transform: translateX(-50%);
         background-image: url('../img/black-card-symbol-group.svg');
         background-size: cover;
+        @media screen and (min-width: 64em) {
+            left: calc(-9.4rem - 3.2rem);
+            transform: translateX(0) translateY(50%);
+            bottom: 50%;
+        }
     }
     &::after {
         position: absolute;
@@ -170,5 +253,10 @@
         transform: translateX(-50%);
         background-image: url('../img/black-card-symbol-group.svg');
         background-size: cover;
+        @media screen and (min-width: 64em) {
+            left: calc(100% + 3.2rem);
+            transform: translateX(0) translateY(-50%);
+            top: 50%;
+        }
     }
 }
