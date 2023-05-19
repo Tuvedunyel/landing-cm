@@ -2,6 +2,7 @@
     --white: #FFFFFF;
     --dark-blue: #09243A;
     --dark-blue-bis: #08243A;
+    --overlay: rgba(9, 36, 58, 0.85);
     --salmon: #E3765B;
     --yellow: #FCD647;
     --beige: #F9EEE1;
@@ -18,4 +19,8 @@
     --bg-card-offer: var(--white);
     --card-title: var(--dark-blue); 
     --span: var(--salmon);
+    --bg-card-link: var(--yellow);
+    --bg-overlay: var(--overlay);
+    --bg-light: var(--white);
+    --bg-popin-header: var(--yellow);
 }

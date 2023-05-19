@@ -1,5 +1,6 @@
 .pair-description,
-.brelan-description {
+.brelan-description,
+.square-description {
     position: relative;
 
     h3 {
@@ -57,7 +58,7 @@
 .card-brelan {
     background-color: var(--bg-card-offer);
     border-radius: 1.2rem;
-    border: 0.2rem solid white;
+    border: 0.3rem solid white;
     margin-block-end: 1.3rem;
 
     h4 {
@@ -122,3 +123,12 @@
         color: var(--txt-white);
     }
 }
+
+.link-brelan {
+    background-color: var(--bg-card-link);
+    border: none !important;
+    a {
+        color: var(--txt);
+    }
+}
+

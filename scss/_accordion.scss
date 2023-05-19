@@ -1,0 +1,15 @@
+.accordion {
+    .accordion-section {
+        .accordion-title {
+
+        }
+        .accordion-content {
+            display: none;
+        }
+        &.open {
+            .accordion-content {
+                display: block;
+            }
+        }
+    }
+}

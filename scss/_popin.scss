@@ -1,0 +1,36 @@
+.popin {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background-color: var(--bg-overlay);
+    justify-content: center;
+    align-items: center;
+    padding-inline: 1rem;
+    // scroll-behavior: ;
+    .popin-container {
+        // padding: 5.5rem 9.4rem 6.9rem;
+        background-color: var(--bg-light);
+        border-radius: 3rem;
+        overflow: hidden;
+        .popin-header {
+            background-color: var(--bg-popin-header);
+            padding: 6.9rem 9.4rem 4.4rem;
+            
+        }
+    }
+    &.open {
+        display: flex;
+    }
+    &.two-cards {
+        &::before {
+            position: absolute;
+            content: "";
+            background-image: url('../img/formula-pair.png');
+
+        }
+    }
+}
