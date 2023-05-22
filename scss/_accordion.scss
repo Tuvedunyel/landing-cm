@@ -1,15 +1,90 @@
 .accordion {
-    .accordion-section {
-        .accordion-title {
+    padding-block: 3rem;
 
+    h2 {
+        line-height: calc(58 / 44);
+        font-size: 4.4rem;
+        font-weight: 700;
+        text-align: center;
+        margin-block-end: 7.1rem;
+        position: relative;
+
+        span {
+            color: var(--txt-promote);
         }
-        .accordion-content {
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 13.3rem;
+            height: 2.3rem;
+            top: calc(100% + 2.1rem);
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url('../img/black-card-symbol-group.svg');
+        }
+    }
+}
+
+.accordion-section {
+    border-block-end: 0.1rem solid var(--secondary);
+    padding-block: 2rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: calc(21 / 16);
+
+    .accordion-title {
+        position: relative;
+        cursor: pointer;
+        h3 {
+            font-size: 2.8rem;
+            line-height: calc(37 / 28);
+            font-weight: 700;
+            padding-inline-end: 6rem;
+        }
+
+        .more {
+            display: block;
+        }
+
+        .less {
             display: none;
         }
-        &.open {
-            .accordion-content {
+    }
+
+    .accordion-content {
+        display: none;
+        ul li {
+            list-style-type: none;
+        }
+        .acc-content-social {
+            font-weight: 600;
+        }
+    }
+
+    &.open {
+        .accordion-title {
+            .more {
+                display: none;
+            }
+
+            .less {
                 display: block;
             }
         }
+
+        .accordion-content {
+            display: block;
+            margin-block-start: 3rem;
+        }
     }
+}
+
+
+.more,
+.less {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
 }

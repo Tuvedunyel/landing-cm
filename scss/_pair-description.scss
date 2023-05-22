@@ -10,7 +10,7 @@
         margin-block-end: 0.6rem;
 
         span {
-            color: var(--span);
+            color: var(--txt-promote);
         }
     }
 
@@ -35,6 +35,12 @@
         }
     }
 
+    .square-price {
+        font-weight: 700;
+        font-size: 4.4rem;
+        line-height: calc(47 / 44);
+    }
+
     .informations-sup {
         font-weight: 300;
         font-style: italic;
@@ -48,10 +54,11 @@
     h3 {
         font-size: 3.5rem;
         line-height: calc(37 / 35);
+
         span {
-            color: var(--yellow) !important;
+            color: var(--senary) !important;
         }
-    }    
+    }
 }
 
 .card-pair,
@@ -71,7 +78,8 @@
         padding-inline-start: 1.3rem;
 
         span {
-            color: var(--span);
+            color: var(--txt-promote);
+
         }
     }
 
@@ -87,48 +95,80 @@
             line-height: calc(47 / 16);
             font-weight: 300;
 
-            span {
-                color: var(--span);
+            .list-info {
+                color: var(--txt-promote);
                 font-weight: 600;
                 line-height: calc(27 / 18);
-                em {
-                    font-weight: 300;
-                }
             }
+
+            .list-info-add {
+                color: var(--txt-promote);
+                font-weight: 300;
+                line-height: calc(27 / 18);
+            }
+        }
+
+        .list-space {
+            line-height: calc(27 / 18);
+            padding-block: 1rem;
         }
     }
 }
 
 .card-brelan {
+
     h4,
     .list-item {
-    font-size: 1.8rem !important;
+        font-size: 1.8rem !important;
     }
-    
+
+    .title-engage {
+        line-height: calc(27 / 18);
+        padding-block: 1rem;
+    }
 }
 
 .link-pair,
-.link-brelan {
+.link-brelan,
+.link-square {
+    display: inline-block;
     border: 0.2rem solid white;
     border-radius: 4.9rem;
     margin-inline: auto;
     width: 28rem;
     text-align: center;
     padding-block: 1rem;
-
-    a {
-        line-height: calc(30 / 22);
-        font-size: 2.2rem;
-        text-decoration: none;
-        color: var(--txt-white);
-    }
+    line-height: calc(30 / 22);
+    font-size: 2.2rem;
+    text-decoration: none;
+    color: var(--txt-light);
 }
 
 .link-brelan {
     background-color: var(--bg-card-link);
     border: none !important;
+
     a {
-        color: var(--txt);
+        color: var(--txt-dark);
     }
 }
 
+.card-square {
+    background-color: var(--nonary);
+    border: 0.3rem solid var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 5rem;
+    border-radius: 1.2rem;
+    margin-block-start: 3rem;
+    margin-block-end: 4.1rem;
+
+    h4 {
+        font-size: 2.2rem;
+        line-height: calc(32 / 22);
+        font-style: italic;
+        font-weight: 700;
+        color: var(--txt-light);
+    }
+}

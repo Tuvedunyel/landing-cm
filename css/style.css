@@ -193,29 +193,31 @@ address {
   src: url("../fonts/exo-v20-latin-900.woff2") format("woff2"), url("../fonts/exo-v20-latin-900.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 :root {
-  --white: #FFFFFF;
-  --dark-blue: #09243A;
-  --dark-blue-bis: #08243A;
-  --overlay: rgba(9, 36, 58, 0.85);
-  --salmon: #E3765B;
-  --yellow: #FCD647;
-  --beige: #F9EEE1;
-  --dark: #000000;
-  --txt: var(--dark);
-  --txt-white: var(--white);
-  --bg-header: var(--dark-blue-bis);
-  --bg-communication: var(--yellow);
-  --bg-card: var(--dark-blue-bis);
-  --bg-about-bottom: var(--yellow);
-  --bg-comments: var(--beige);
-  --bg-offers: var(--dark-blue);
-  --bg-card-offer: var(--white);
-  --card-title: var(--dark-blue);
-  --span: var(--salmon);
-  --bg-card-link: var(--yellow);
-  --bg-overlay: var(--overlay);
-  --bg-light: var(--white);
-  --bg-popin-header: var(--yellow);
+  --primary: #FFFFFF;
+  --secondary: #09243A;
+  --tertiary: #08243A;
+  --quaternary: rgba(9, 36, 58, 0.85);
+  --quinary: #E3765B;
+  --senary: #FCD647;
+  --septenary: #F9EEE1;
+  --octonary: #000000;
+  --nonary: rgba(255, 255, 255, 0.31);
+  --txt-dark: var(--octonary);
+  --txt-light: var(--primary);
+  --txt-promote: var(--quinary);
+  --bg-header: var(--tertiary);
+  --bg-communication: var(--senary);
+  --bg-card: var(--tertiary);
+  --bg-about-bottom: var(--senary);
+  --bg-comments: var(--septenary);
+  --bg-offers: var(--secondary);
+  --bg-card-offer: var(--primary);
+  --card-title: var(--secondary);
+  --bg-card-link: var(--senary);
+  --bg-overlay: var(--quaternary);
+  --bg-light: var(--primary);
+  --bg-popin-header: var(--senary);
+  --bg-footer: var(--tertiary);
 }
 
 body {
@@ -223,7 +225,7 @@ body {
   font-weight: 300;
   font-size: 2rem;
   line-height: 1;
-  color: var(--txt);
+  color: var(--txt-dark);
 }
 
 h1 {
@@ -250,14 +252,14 @@ header {
 }
 header .header-container {
   text-align: center;
-  color: var(--txt-white);
+  color: var(--txt-light);
   padding-block: 2.2rem;
   line-height: 1.3333333333;
   font-size: 1.5rem;
 }
 header .header-container a {
   font-weight: 500;
-  color: var(--txt-white);
+  color: var(--txt-light);
   position: relative;
 }
 header .header-container a::before {
@@ -393,7 +395,7 @@ header .header-container a::before {
   position: relative;
 }
 .about-top h2 span {
-  color: var(--span);
+  color: var(--txt-promote);
 }
 .about-top h2::before {
   position: absolute;
@@ -480,7 +482,7 @@ header .header-container a::before {
 }
 
 .about-top > p:nth-child(4) {
-  color: var(--span);
+  color: var(--txt-promote);
   font-size: 2.5rem;
   font-weight: 700;
 }
@@ -586,7 +588,7 @@ header .header-container a::before {
 .picture .card-description h3 {
   font-size: 2.8rem;
   line-height: 1.2142857143;
-  color: var(--txt-white);
+  color: var(--txt-light);
   margin-block-end: 1.5rem;
 }
 @media screen and (min-width: 64em) {
@@ -602,7 +604,7 @@ header .header-container a::before {
 .targets .card-description h3 span,
 .clients .card-description h3 span,
 .picture .card-description h3 span {
-  color: var(--span);
+  color: var(--txt-promote);
 }
 .audience .card-description p,
 .targets .card-description p,
@@ -610,7 +612,7 @@ header .header-container a::before {
 .picture .card-description p {
   font-size: 1.6rem;
   line-height: 1.3125;
-  color: var(--txt-white);
+  color: var(--txt-light);
 }
 @media screen and (min-width: 64em) {
   .audience .card-description p,
@@ -623,23 +625,23 @@ header .header-container a::before {
 }
 
 .about-bottom {
+  display: flex;
+  justify-content: center;
   background-color: var(--bg-about-bottom);
   border-radius: 12.9rem;
   padding-block: 2rem;
   text-align: center;
   position: relative;
+  text-decoration: none;
+  color: var(--txt-dark);
+  font-size: 2.4rem;
+  line-height: 1.3333333333;
+  margin-inline: auto;
 }
 @media screen and (min-width: 64em) {
   .about-bottom {
     width: 46.7rem;
-    margin-inline: auto;
   }
-}
-.about-bottom a {
-  text-decoration: none;
-  color: var(--txt);
-  font-size: 2.4rem;
-  line-height: 1.3333333333;
 }
 .about-bottom::before {
   position: absolute;
@@ -724,7 +726,7 @@ header .header-container a::before {
   background-size: cover;
 }
 .comments span {
-  color: var(--span);
+  color: var(--txt-promote);
 }
 .comments p:nth-child(2) {
   font-weight: 500;
@@ -739,10 +741,11 @@ header .header-container a::before {
 }
 
 .offers {
-  background-color: var(--dark-blue);
+  background-color: var(--bg-offers);
   text-align: center;
   padding-block-start: 3.4rem;
-  color: var(--txt-white);
+  padding-block-end: 6.9rem;
+  color: var(--txt-light);
 }
 .offers h2 {
   font-weight: 700;
@@ -752,7 +755,7 @@ header .header-container a::before {
   position: relative;
 }
 .offers h2 span {
-  color: var(--span);
+  color: var(--txt-promote);
 }
 .offers h2::after {
   position: absolute;
@@ -769,6 +772,13 @@ header .header-container a::before {
 .offers-list {
   display: grid;
   gap: 30rem;
+  max-width: 148rem;
+}
+@media screen and (min-width: 90em) {
+  .offers-list {
+    grid-template-columns: 40.7fr 44.9fr 40.7fr;
+    gap: 10.7rem;
+  }
 }
 
 .pair-description,
@@ -787,7 +797,7 @@ header .header-container a::before {
 .pair-description h3 span,
 .brelan-description h3 span,
 .square-description h3 span {
-  color: var(--span);
+  color: var(--txt-promote);
 }
 .pair-description img,
 .brelan-description img,
@@ -813,6 +823,13 @@ header .header-container a::before {
   font-size: 4.4rem;
   line-height: 1.0681818182;
 }
+.pair-description .square-price,
+.brelan-description .square-price,
+.square-description .square-price {
+  font-weight: 700;
+  font-size: 4.4rem;
+  line-height: 1.0681818182;
+}
 .pair-description .informations-sup,
 .brelan-description .informations-sup,
 .square-description .informations-sup {
@@ -828,7 +845,7 @@ header .header-container a::before {
   line-height: 1.0571428571;
 }
 .brelan-description h3 span {
-  color: var(--yellow) !important;
+  color: var(--senary) !important;
 }
 
 .card-pair,
@@ -850,7 +867,7 @@ header .header-container a::before {
 }
 .card-pair h4 span,
 .card-brelan h4 span {
-  color: var(--span);
+  color: var(--txt-promote);
 }
 .card-pair .list,
 .card-brelan .list {
@@ -866,37 +883,47 @@ header .header-container a::before {
   line-height: 2.9375;
   font-weight: 300;
 }
-.card-pair .list .list-item span,
-.card-brelan .list .list-item span {
-  color: var(--span);
+.card-pair .list .list-item .list-info,
+.card-brelan .list .list-item .list-info {
+  color: var(--txt-promote);
   font-weight: 600;
   line-height: 1.5;
 }
-.card-pair .list .list-item span em,
-.card-brelan .list .list-item span em {
+.card-pair .list .list-item .list-info-add,
+.card-brelan .list .list-item .list-info-add {
+  color: var(--txt-promote);
   font-weight: 300;
+  line-height: 1.5;
+}
+.card-pair .list .list-space,
+.card-brelan .list .list-space {
+  line-height: 1.5;
+  padding-block: 1rem;
 }
 
 .card-brelan h4,
 .card-brelan .list-item {
   font-size: 1.8rem !important;
 }
+.card-brelan .title-engage {
+  line-height: 1.5;
+  padding-block: 1rem;
+}
 
 .link-pair,
-.link-brelan {
+.link-brelan,
+.link-square {
+  display: inline-block;
   border: 0.2rem solid white;
   border-radius: 4.9rem;
   margin-inline: auto;
   width: 28rem;
   text-align: center;
   padding-block: 1rem;
-}
-.link-pair a,
-.link-brelan a {
   line-height: 1.3636363636;
   font-size: 2.2rem;
   text-decoration: none;
-  color: var(--txt-white);
+  color: var(--txt-light);
 }
 
 .link-brelan {
@@ -904,14 +931,102 @@ header .header-container a::before {
   border: none !important;
 }
 .link-brelan a {
-  color: var(--txt);
+  color: var(--txt-dark);
 }
 
-.accordion .accordion-section .accordion-content {
+.card-square {
+  background-color: var(--nonary);
+  border: 0.3rem solid var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 5rem;
+  border-radius: 1.2rem;
+  margin-block-start: 3rem;
+  margin-block-end: 4.1rem;
+}
+.card-square h4 {
+  font-size: 2.2rem;
+  line-height: 1.4545454545;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--txt-light);
+}
+
+.accordion {
+  padding-block: 3rem;
+}
+.accordion h2 {
+  line-height: 1.3181818182;
+  font-size: 4.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-block-end: 7.1rem;
+  position: relative;
+}
+.accordion h2 span {
+  color: var(--txt-promote);
+}
+.accordion h2::after {
+  position: absolute;
+  content: "";
+  width: 13.3rem;
+  height: 2.3rem;
+  top: calc(100% + 2.1rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../img/black-card-symbol-group.svg");
+}
+
+.accordion-section {
+  border-block-end: 0.1rem solid var(--secondary);
+  padding-block: 2rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.3125;
+}
+.accordion-section .accordion-title {
+  position: relative;
+  cursor: pointer;
+}
+.accordion-section .accordion-title h3 {
+  font-size: 2.8rem;
+  line-height: 1.3214285714;
+  font-weight: 700;
+  padding-inline-end: 6rem;
+}
+.accordion-section .accordion-title .more {
+  display: block;
+}
+.accordion-section .accordion-title .less {
   display: none;
 }
-.accordion .accordion-section.open .accordion-content {
+.accordion-section .accordion-content {
+  display: none;
+}
+.accordion-section .accordion-content ul li {
+  list-style-type: none;
+}
+.accordion-section .accordion-content .acc-content-social {
+  font-weight: 600;
+}
+.accordion-section.open .accordion-title .more {
+  display: none;
+}
+.accordion-section.open .accordion-title .less {
   display: block;
+}
+.accordion-section.open .accordion-content {
+  display: block;
+  margin-block-start: 3rem;
+}
+
+.more,
+.less {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
 }
 
 .popin {
@@ -931,6 +1046,8 @@ header .header-container a::before {
   background-color: var(--bg-light);
   border-radius: 3rem;
   overflow: hidden;
+  height: 500px;
+  overflow-y: auto;
 }
 .popin .popin-container .popin-header {
   background-color: var(--bg-popin-header);
@@ -943,6 +1060,35 @@ header .header-container a::before {
   position: absolute;
   content: "";
   background-image: url("../img/formula-pair.png");
+}
+
+.popin-form {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.popin-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popin-form label,
+.popin-form input,
+.popin-form textarea {
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: var(--tertiary);
+  padding-block: 2.2rem;
+  text-align: center;
+}
+footer .footer-link {
+  text-decoration: none;
+  color: var(--txt-light);
+  font-size: 2.2rem;
+  line-height: 1.3636363636;
 }
 
 /*# sourceMappingURL=style.css.map */

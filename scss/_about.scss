@@ -3,7 +3,7 @@
     padding-block-end: 8rem;
 }
 
-@media screen and (min-width:64em) {
+@media screen and (min-width:$m) {
     .about {
         padding-block-start: 3.2rem;
         padding-block-end: 7.4rem;
@@ -12,7 +12,8 @@
 
 .about-top {
     margin-block-end: 23.5rem;
-    @media screen and (min-width:48em) {
+
+    @media screen and (min-width:$s) {
         margin-block-end: 20rem;
     }
 
@@ -24,7 +25,7 @@
         position: relative;
 
         & span {
-            color: var(--span);
+            color: var(--txt-promote);
         }
 
         &::before {
@@ -53,16 +54,16 @@
     }
 }
 
-@media screen and (min-width:64em) {
+@media screen and (min-width:$m) {
     .about-top {
         margin-block-end: 25.7rem;
-    
+
         h2 {
             margin-block-end: 7rem;
             width: 70rem;
             margin-inline: auto;
             padding-inline-start: 4rem;
-            
+
             &::before {
                 width: 26rem;
                 height: 32rem;
@@ -70,7 +71,7 @@
                 left: 0rem;
                 background-image: url('../img/ace-card-simple@2x.png');
             }
-    
+
             &::after {
                 width: 13.3rem;
                 height: 2.3rem;
@@ -79,14 +80,15 @@
                 transform: translateX(-95%);
             }
         }
-    }  
+    }
 }
 
-@media screen and (min-width: 90em) {
+@media screen and (min-width: $l) {
     .about-top h2 {
         font-size: 4.4rem;
         line-height: calc(58 / 44);
         padding-inline-start: 0;
+
         &::before {
             top: -14rem;
             left: -10rem;
@@ -104,30 +106,34 @@
 
 .about-top>p:first-of-type {
     font-size: 1.8rem;
-    @media screen and (min-width:64em) {
+
+    @media screen and (min-width:$m) {
         margin-inline: auto;
         width: 80rem;
         font-size: 2rem;
         line-height: calc(27 / 20);
         padding-inline-start: 18.5rem;
     }
-    @media screen and (min-width: 90em) {
+
+    @media screen and (min-width: $l) {
         padding-inline-start: 11rem;
     }
 }
 
 .about-top>p:nth-child(4) {
-    color: var(--span);
+    color: var(--txt-promote);
     font-size: 2.5rem;
     font-weight: 700;
-    @media screen and (min-width:64em) {
+
+    @media screen and (min-width:$m) {
         margin-inline: auto;
         width: 80rem;
         font-size: 2.7rem;
         line-height: calc(36 / 27);
         padding-inline-start: 18.5rem;
     }
-    @media screen and (min-width: 90em) {
+
+    @media screen and (min-width: $l) {
         padding-inline-start: 11rem;
     }
 }
@@ -136,17 +142,20 @@
     display: grid;
     gap: 20.6rem;
     margin-block-end: 5.4rem;
-    @media screen and (min-width:48em) {
+
+    @media screen and (min-width:$s) {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 3.6rem;
         row-gap: 20rem;
         width: min(100%, 80rem);
         margin-inline: auto;
     }
-    @media screen and (min-width: 64em) {
+
+    @media screen and (min-width: $m) {
         row-gap: 27.1rem;
     }
-    @media screen and (min-width: 90em) {
+
+    @media screen and (min-width: $l) {
         grid-template-columns: repeat(4, 1fr);
         width: 100%;
     }
@@ -157,23 +166,27 @@
 .clients,
 .picture {
     position: relative;
+
     picture {
         position: absolute;
         bottom: calc(85%);
         left: 50%;
         transform: translateX(-50%) rotate(-11deg);
         z-index: 2;
-        @media screen and (min-width: 64em) {
+
+        @media screen and (min-width: $m) {
             bottom: calc(83%);
             transform: translateX(-68%) rotate(0);
         }
+
         img {
-            @media screen and (min-width: 64em) {
+            @media screen and (min-width: $m) {
                 height: 31rem;
                 max-width: none;
             }
         }
     }
+
     .card-description {
         position: relative;
         background-color: var(--bg-card);
@@ -181,29 +194,35 @@
         padding-inline: 2rem;
         padding-block-start: 5.2rem;
         padding-block-end: 5.9rem;
-        @media screen and (min-width: 64em) {
+
+        @media screen and (min-width: $m) {
             padding-block-start: 4.7rem;
             padding-block-end: 5rem;
             border-radius: 4.9rem;
         }
+
         h3 {
             font-size: 2.8rem;
             line-height: calc(34 / 28);
-            color: var(--txt-white);
+            color: var(--txt-light);
             margin-block-end: 1.5rem;
-            @media screen and (min-width: 64em) {
+
+            @media screen and (min-width: $m) {
                 font-size: 3.2rem;
                 line-height: calc(34 / 32);
             }
+
             span {
-                color: var(--span);
+                color: var(--txt-promote);
             }
         }
+
         p {
             font-size: 1.6rem;
             line-height: calc(21 / 16);
-            color: var(--txt-white);
-            @media screen and (min-width: 64em) {
+            color: var(--txt-light);
+
+            @media screen and (min-width: $m) {
                 font-size: 1.8rem;
                 line-height: calc(24 / 18);
             }
@@ -212,21 +231,22 @@
 }
 
 .about-bottom {
+    display: flex;
+    justify-content: center;
     background-color: var(--bg-about-bottom);
     border-radius: 12.9rem;
     padding-block: 2rem;
     text-align: center;
     position: relative;
-    @media screen and (min-width:64em) {
+    text-decoration: none;
+    color: var(--txt-dark);
+    font-size: 2.4rem;
+    line-height: calc(32 / 24);
+    margin-inline: auto;
+    @media screen and (min-width:$m) {
         width: 46.7rem;
-        margin-inline: auto;
     }
-    a {
-        text-decoration: none;
-        color: var(--txt);
-        font-size: 2.4rem;
-        line-height: calc(3.2 / 2.4); 
-    }
+
     &::before {
         position: absolute;
         content: "";
@@ -237,12 +257,14 @@
         transform: translateX(-50%);
         background-image: url('../img/black-card-symbol-group.svg');
         background-size: cover;
-        @media screen and (min-width: 64em) {
+
+        @media screen and (min-width: $m) {
             left: calc(-9.4rem - 3.2rem);
             transform: translateX(0) translateY(50%);
             bottom: 50%;
         }
     }
+
     &::after {
         position: absolute;
         content: "";
@@ -253,7 +275,8 @@
         transform: translateX(-50%);
         background-image: url('../img/black-card-symbol-group.svg');
         background-size: cover;
-        @media screen and (min-width: 64em) {
+
+        @media screen and (min-width: $m) {
             left: calc(100% + 3.2rem);
             transform: translateX(0) translateY(-50%);
             top: 50%;

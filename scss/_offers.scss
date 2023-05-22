@@ -1,8 +1,9 @@
 .offers {
-    background-color: var(--dark-blue);
+    background-color: var(--bg-offers);
     text-align: center;
     padding-block-start: 3.4rem;
-    color: var(--txt-white);
+    padding-block-end: 6.9rem;
+    color: var(--txt-light);
     h2 {
         font-weight: 700;
         font-size: 4.4rem;
@@ -10,7 +11,7 @@
         margin-block-end: 31.9rem;
         position: relative;
         span {
-            color: var(--span);
+            color: var(--txt-promote);
         }
         &::after {
             position: absolute;
@@ -29,4 +30,9 @@
 .offers-list {
     display: grid;
     gap: 30rem;
+    max-width: 148rem;
+    @media screen and (min-width: $l) {
+        grid-template-columns: 40.7fr 44.9fr 40.7fr;
+        gap: 10.7rem;
+    }
 }

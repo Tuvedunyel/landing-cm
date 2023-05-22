@@ -10,21 +10,25 @@
     justify-content: center;
     align-items: center;
     padding-inline: 1rem;
-    // scroll-behavior: ;
+
     .popin-container {
-        // padding: 5.5rem 9.4rem 6.9rem;
         background-color: var(--bg-light);
         border-radius: 3rem;
         overflow: hidden;
+        height: 500px; 
+        overflow-y: auto;
+
         .popin-header {
             background-color: var(--bg-popin-header);
             padding: 6.9rem 9.4rem 4.4rem;
-            
+
         }
     }
+
     &.open {
         display: flex;
     }
+
     &.two-cards {
         &::before {
             position: absolute;
@@ -34,3 +38,24 @@
         }
     }
 }
+
+.popin-form {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.popin-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popin-form label,
+.popin-form input,
+.popin-form textarea {
+    margin-bottom: 1rem;
+}
+
+
+
+//////////OVERFLOW-Y HIDDEN soit sur body ou html donc à voir comment ajouiter une classe pour ne pas tout bloquer
