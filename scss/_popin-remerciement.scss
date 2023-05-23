@@ -1,4 +1,4 @@
-.popin {
+.popin-remerciement {
     display: none;
     position: fixed;
     width: 100%;
@@ -10,7 +10,6 @@
     justify-content: center;
     align-items: center;
     padding-inline: 1rem;
-    overflow-y: auto;
     padding-block: 20rem;
 
     .popin-logo {
@@ -46,14 +45,6 @@
             p {
                 font-size: 3rem;
                 line-height: calc(41 / 30);
-            }
-
-            .popin-title {
-                font-size: 4.8rem;
-                font-weight: 900;
-                line-height: calc(65 / 48);
-                color: var(--txt-promote);
-                position: relative;
 
                 &::after {
                     position: absolute;
@@ -81,71 +72,8 @@
     background-color: var(--bg-light);
     padding-inline: 1.1rem;
     padding-block-start: 2rem;
-
-    .popin-contact {
-        font-weight: 700;
-        font-size: 2.4rem;
-        line-height: calc(32 / 24);
-        text-align: center;
-        margin-block-end: 0.6rem;
-
-        span {
-            color: var(--txt-promote)
-        }
-    }
-
-    .popin-form-instruction {
-        padding-block-end: 3rem;
-        font-size: 1.6rem;
-        line-height: calc(21 / 16);
-        font-weight: 300;
-        text-align: center;
-    }
-}
-
-.popin-form form {
-    display: flex;
-    flex-direction: column;
-}
-
-.popin-form input {
-    margin-block-end: 1.7rem;
-    padding-inline: 2rem;
-    height: 5rem;
-    border-radius: 1.2rem;
-    border: 0.1rem solid var(--octonary);
-    font-weight: 300;
-    font-size: 1.6rem;
-    line-height: calc(21 / 16);
-}
-
-input[type="submit"] {
-    border-radius: 12.9rem;
-    height: 7.3rem;
-    font-size: 2.4rem;
-    line-height: calc(32 / 24);
-    color: var(--octonary);
-    background-color: var(--bg-card-link);
-    border: none;
-    margin-block-end: 2.5rem;
-}
-
-.popin-form textarea {
-    margin-block-end: 1.7rem;
-    border-radius: 1.2rem;
-    border: 0.1rem solid var(--octonary);
-    resize: vertical;
-    min-height: 13.5rem;
-    max-height: 40rem;
-}
-
-.popin-form label {
-    font-size: 1.6rem;
-    font-weight: 700;
-    line-height: calc(21 / 16);
 }
 
 body.popin-open {
     overflow-y: hidden;
 }
-

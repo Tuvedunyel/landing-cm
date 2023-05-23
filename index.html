@@ -17,7 +17,7 @@
     <header class="main-header">
         <div class="container header-container">
             <p>Profitez du meilleur pour vos réseaux sociaux</p>
-            <a href="#">Je veux être plus visible</a>
+            <a href="#offers">Je veux être plus visible</a>
         </div>
     </header>
 
@@ -94,26 +94,26 @@
                         </div>
                     </div>
                 </div>
-                <a class="about-bottom" href="#">Je veux être plus visible</a>
+                <a class="about-bottom" href="#offers">Je veux être plus visible</a>
             </div>
         </section>
 
         <section class="comments">
             <div class="container">
-                <p>« Très <span>rapidement</span>, notre présence sur les <span>réseaux sociaux</span> a été
-                    <span>adaptée</span> à nos cibles et a été beaucoup <span>plus efficace</span>. »
+                <p>« Très <span>rapidement</span>, notre présence sur les <span>réseaux sociaux</span> a été
+                    <span>adaptée</span> à nos cibles et a été beaucoup <span>plus efficace</span>. »
                 </p>
                 <p>Arthur V, CEO.</p>
             </div>
         </section>
 
-        <section class="offers">
+        <section class="offers" id="offers">
             <div class="container">
                 <h2>Nos <span>solutions</span></h2>
                 <div class="offers-list">
                     <div class="offer-pair">
                         <div class="pair-description">
-                            <h3>La formule<br><span> « La Paire »</span></h3>
+                            <h3>La formule<br><span> « La Paire »</span></h3>
                             <img src="/img/formula-pair.png" alt="">
                             <p><span>199€</span> HT / mois</p>
                             <div class="card-pair">
@@ -139,13 +139,13 @@
                             </div>
                             <p class="informations-sup">* Images fournies par le client ou photo / illustration de
                                 banque d'image</p>
-                            <a class="link-pair more-visibility" href="#" data-title="La Paire"
-                                data-theme="two-cards">Je veux être plus visible</a>
+                            <a class="link-pair more-visibility" href="#offers" data-title="La Paire"
+                                data-theme="two-cards" data-image="/img/formula-pair.png">Je veux être plus visible</a>
                         </div>
                     </div>
                     <div class="offer-brelan">
                         <div class="brelan-description">
-                            <h3>La formule<br><span> « Le Brelan »</span></h3>
+                            <h3>La formule<br><span> « Le Brelan »</span></h3>
                             <img src="/img/formula-brelan.png" alt="">
                             <p><span>399€</span> HT / mois</p>
                             <div class="card-brelan">
@@ -193,21 +193,23 @@
                                     <br><span>Engagement de 12 mois : 5% de réduction</span>
                                 </h4>
                             </div>
-                            <a class="link-brelan more-visibility" href="#" data-title="Le Brelan"
-                                data-theme="three-cards">Je veux être plus visible</a>
+                            <a class="link-brelan more-visibility" href="#offers" data-title="Le Brelan"
+                                data-theme="three-cards" data-image="/img/formula-brelan.png">Je veux être plus
+                                visible</a>
                         </div>
                     </div>
                     <div class="offer-square">
                         <div class="square-description">
                             <div class="square-description">
-                                <h3>La formule <br><span> « Le Carré »</span></h3>
+                                <h3>La formule <br><span> « Le Carré »</span></h3>
                                 <img src="/img/formula-square.png" alt="">
                                 <span class="square-price">sur devis</span>
                                 <div class="card-square">
                                     <h4>Je veux une formule performante qui soit adaptée à mes besoins</h4>
                                 </div>
-                                <a class="link-square more-visibility" href="#" data-title="Le Carré"
-                                    data-theme="four-cards">Je veux être plus visible</a>
+                                <a class="link-square more-visibility" href="#offers" data-title="Le Carré"
+                                    data-theme="four-cards" data-image="/img/formula-square.png">Je veux être plus
+                                    visible</a>
                             </div>
                         </div>
                     </div>
@@ -400,16 +402,20 @@
         </section>
     </main>
     <div class="popin">
+        <img class="popin-logo" src="" alt="logo de la formule">
         <div class="popin-container">
-            <!-- <img src="" alt=""> -->
+            <img class="popin-close" src="img/cross.png" alt="">
+
             <div class="popin-header">
                 <p>Vous avez choisi</p>
                 <h4 class="popin-title"></h4>
             </div>
             <div class="popin-form">
-                <p>Un de nos <span>experts</span> va prendre contact avec vous pour la mise en place de votre
-                    <span>visibilité sur les réseaux sociaux.</span></p>
-                <p>Merci de remplir les informations suivantes :</p>
+                <p class="popin-contact">Un de nos <span>experts</span> va prendre contact avec vous pour la mise en
+                    place de votre
+                    <span>visibilité sur les réseaux sociaux.</span>
+                </p>
+                <p class="popin-form-instruction">Merci de remplir les informations suivantes :</p>
                 <form id="contact">
                     <label for="name">Nom/Prénom *</label>
                     <input type="text" name="name" id="name" placeholder="Guillaume Le Port" required>
@@ -421,7 +427,7 @@
                     <input type="email" name="email" id="email" placeholder="guillaume@btg-communication.fr" required>
 
                     <label for="phone">Téléphone *</label>
-                    <input type="tel" name="phone" id="phone" placeholder="0246655115" required>
+                    <input type="tel" name="phone" id="phone" placeholder="02 46 65 51 15" maxlength="14" required>
 
                     <label for="address">Adresse *</label>
                     <input type="text" name="address" id="address" placeholder="52 boulevard Heurteloup" required>
@@ -430,10 +436,24 @@
                     <input type="text" name="city" id="city" placeholder="37000 Tours" required>
 
                     <label for="message">Message <span>(facultatif)</span></label>
-                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                    
-                    <input type="submit" value="Je veux être plus visible">
+                    <textarea name="message" id="message"></textarea>
+
+                    <input type="submit" id="submit" value="Je veux être plus visible">
                 </form>
+            </div>
+        </div>
+    </div>
+    <div class="popin-remerciement">
+        <img class="popin-logo" src="" alt="logo de la formule">
+        <div class="popin-container">
+            <img class="popin-close" src="img/cross.png" alt="">
+            <div class="popin-header">
+                <p>Merci !</p>
+            </div>
+            <div class="popin-form">
+                <p>Votre demande nous est bien parvenue.</p>
+                <p>Nous allons prendre contact avec vous dans les meilleurs délais.</p>
+                <p>L’équipe btg communication</p>
             </div>
         </div>
     </div>

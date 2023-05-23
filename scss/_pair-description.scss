@@ -116,6 +116,7 @@
 }
 
 .card-brelan {
+    margin-block-end: 3rem;
 
     h4,
     .list-item {
@@ -146,11 +147,10 @@
 
 .link-brelan {
     background-color: var(--bg-card-link);
-    border: none !important;
-
-    a {
-        color: var(--txt-dark);
-    }
+    border: none;
+    color: var(--txt-dark);
+    padding-block: 1.5rem;
+    width: 100%;
 }
 
 .card-square {

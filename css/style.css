@@ -218,6 +218,7 @@ address {
   --bg-light: var(--primary);
   --bg-popin-header: var(--senary);
   --bg-footer: var(--tertiary);
+  --border-input: var(--octonary);
 }
 
 body {
@@ -901,6 +902,9 @@ header .header-container a::before {
   padding-block: 1rem;
 }
 
+.card-brelan {
+  margin-block-end: 3rem;
+}
 .card-brelan h4,
 .card-brelan .list-item {
   font-size: 1.8rem !important;
@@ -928,10 +932,10 @@ header .header-container a::before {
 
 .link-brelan {
   background-color: var(--bg-card-link);
-  border: none !important;
-}
-.link-brelan a {
+  border: none;
   color: var(--txt-dark);
+  padding-block: 1.5rem;
+  width: 100%;
 }
 
 .card-square {
@@ -1041,31 +1045,86 @@ header .header-container a::before {
   justify-content: center;
   align-items: center;
   padding-inline: 1rem;
+  overflow-y: auto;
+  padding-block: 20rem;
+}
+.popin .popin-logo {
+  position: absolute;
+  top: 8.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3000;
 }
 .popin .popin-container {
-  background-color: var(--bg-light);
   border-radius: 3rem;
   overflow: hidden;
-  height: 500px;
-  overflow-y: auto;
+  margin-block: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.popin .popin-container .popin-close {
+  position: absolute;
+  top: 1.7rem;
+  right: 2.7rem;
+  cursor: pointer;
 }
 .popin .popin-container .popin-header {
   background-color: var(--bg-popin-header);
-  padding: 6.9rem 9.4rem 4.4rem;
+  text-align: center;
+  padding: 6.9rem 1rem 4.4rem;
+  font-weight: 900;
+}
+.popin .popin-container .popin-header p {
+  font-size: 3rem;
+  line-height: 1.3666666667;
+}
+.popin .popin-container .popin-header .popin-title {
+  font-size: 4.8rem;
+  font-weight: 900;
+  line-height: 1.3541666667;
+  color: var(--txt-promote);
+  position: relative;
+}
+.popin .popin-container .popin-header .popin-title::after {
+  position: absolute;
+  content: "";
+  width: 13.3rem;
+  height: 2.3rem;
+  top: calc(100% + 0.3rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../img/white-card-symbol-group.svg");
+  background-size: cover;
 }
 .popin.open {
   display: flex;
-}
-.popin.two-cards::before {
-  position: absolute;
-  content: "";
-  background-image: url("../img/formula-pair.png");
 }
 
 .popin-form {
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
+  background-color: var(--bg-light);
+  padding-inline: 1.1rem;
+  padding-block-start: 2rem;
+}
+.popin-form .popin-contact {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.3333333333;
+  text-align: center;
+  margin-block-end: 0.6rem;
+}
+.popin-form .popin-contact span {
+  color: var(--txt-promote);
+}
+.popin-form .popin-form-instruction {
+  padding-block-end: 3rem;
+  font-size: 1.6rem;
+  line-height: 1.3125;
+  font-weight: 300;
+  text-align: center;
 }
 
 .popin-form form {
@@ -1073,10 +1132,118 @@ header .header-container a::before {
   flex-direction: column;
 }
 
-.popin-form label,
-.popin-form input,
+.popin-form input {
+  margin-block-end: 1.7rem;
+  padding-inline: 2rem;
+  height: 5rem;
+  border-radius: 1.2rem;
+  border: 0.1rem solid var(--octonary);
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.3125;
+}
+
+input[type=submit] {
+  border-radius: 12.9rem;
+  height: 7.3rem;
+  font-size: 2.4rem;
+  line-height: 1.3333333333;
+  color: var(--octonary);
+  background-color: var(--bg-card-link);
+  border: none;
+  margin-block-end: 2.5rem;
+}
+
 .popin-form textarea {
-  margin-bottom: 1rem;
+  margin-block-end: 1.7rem;
+  border-radius: 1.2rem;
+  border: 0.1rem solid var(--octonary);
+  resize: vertical;
+  min-height: 13.5rem;
+  max-height: 40rem;
+}
+
+.popin-form label {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.3125;
+}
+
+body.popin-open {
+  overflow-y: hidden;
+}
+
+.popin-remerciement {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background-color: var(--bg-overlay);
+  justify-content: center;
+  align-items: center;
+  padding-inline: 1rem;
+  padding-block: 20rem;
+}
+.popin-remerciement .popin-logo {
+  position: absolute;
+  top: 8.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3000;
+}
+.popin-remerciement .popin-container {
+  border-radius: 3rem;
+  overflow: hidden;
+  margin-block: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.popin-remerciement .popin-container .popin-close {
+  position: absolute;
+  top: 1.7rem;
+  right: 2.7rem;
+  cursor: pointer;
+}
+.popin-remerciement .popin-container .popin-header {
+  background-color: var(--bg-popin-header);
+  text-align: center;
+  padding: 6.9rem 1rem 4.4rem;
+  font-weight: 900;
+}
+.popin-remerciement .popin-container .popin-header p {
+  font-size: 3rem;
+  line-height: 1.3666666667;
+}
+.popin-remerciement .popin-container .popin-header p::after {
+  position: absolute;
+  content: "";
+  width: 13.3rem;
+  height: 2.3rem;
+  top: calc(100% + 0.3rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../img/white-card-symbol-group.svg");
+  background-size: cover;
+}
+.popin-remerciement.open {
+  display: flex;
+}
+
+.popin-form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-light);
+  padding-inline: 1.1rem;
+  padding-block-start: 2rem;
+}
+
+body.popin-open {
+  overflow-y: hidden;
 }
 
 footer {
