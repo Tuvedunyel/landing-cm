@@ -42,7 +42,7 @@
                         ou une multinationale, qu’importe votre secteur, communiquer est essentiel ! Ne dit-on pas que
                         l’on peut avoir le meilleur produit du monde, sans communication on ne vendra pas ?</p><br>
                     <p>Pour vous rendre visible, vous aurez donc besoin d’une bonne stratégie, de bonnes idées, et
-                        detemps!</p>
+                        de temps!</p>
                 </div>
                 <div class="about-card">
                     <div class="audience">
@@ -416,7 +416,9 @@
                     <span>visibilité sur les réseaux sociaux.</span>
                 </p>
                 <p class="popin-form-instruction">Merci de remplir les informations suivantes :</p>
-                <form id="contact">
+                <form id="contact" action="" method="POST">
+                    <input type="hidden" name="theme" id="theme-input" value="">
+
                     <label for="name">Nom/Prénom *</label>
                     <input type="text" name="name" id="name" placeholder="Guillaume Le Port" required>
 
@@ -436,9 +438,9 @@
                     <input type="text" name="city" id="city" placeholder="37000 Tours" required>
 
                     <label for="message">Message <span>(facultatif)</span></label>
-                    <textarea name="message" id="message"></textarea>
+                    <textarea name="message" id="message" maxlength="1000"></textarea>
 
-                    <input type="submit" id="submit" value="Je veux être plus visible">
+                    <input type="submit" id="submit" name="submit" value="Je veux être plus visible">
                 </form>
             </div>
         </div>
@@ -462,6 +464,30 @@
             <a class="footer-link" href="">Mentions légales</a>
         </div>
     </footer>
+    <!-- <script>
+        $(document).ready(function() {
+            $('#contact').submit(function(event) {
+                event.preventDefault(); // Empêche la soumission par défaut du formulaire
+        
+                var formData = $(this).serialize(); // Sérialise les données du formulaire
+        
+                // Effectue la requête AJAX
+                $.ajax({
+                    type: 'POST',
+                    url: 'traitement_formulaire.php', // Remplacez par le chemin correct vers votre script côté serveur
+                    data: formData,
+                    success: function(response) {
+                        console.log(response); // Affiche la réponse du script côté serveur
+                        // Facultativement, vous pouvez effectuer des actions supplémentaires après la soumission réussie
+                    },
+                    error: function(xhr, status, error) {
+                        console.log(error); // Affiche le message d'erreur si la requête échoue
+                    }
+                });
+            });
+        });
+        </script> -->
+        
 </body>
 
 </html>

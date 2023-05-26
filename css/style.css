@@ -219,6 +219,7 @@ address {
   --bg-popin-header: var(--senary);
   --bg-footer: var(--tertiary);
   --border-input: var(--octonary);
+  --error: var(--quinary);
 }
 
 body {
@@ -1142,6 +1143,10 @@ header .header-container a::before {
   font-size: 1.6rem;
   line-height: 1.3125;
 }
+.popin-form input.error {
+  border: 0.1rem solid var(--error);
+  color: var(--error);
+}
 
 input[type=submit] {
   border-radius: 12.9rem;
@@ -1168,9 +1173,25 @@ input[type=submit] {
   font-weight: 700;
   line-height: 1.3125;
 }
+.popin-form label.error {
+  color: var(--error);
+}
 
 body.popin-open {
   overflow-y: hidden;
+}
+
+.error-message {
+  color: var(--error);
+  font-size: 1.2rem;
+  margin-block-start: -1.5rem;
+  margin-block-end: 1.7rem;
+}
+
+#character-count {
+  font-size: 1.2rem;
+  margin-block-start: -1.5rem;
+  margin-block-end: 1.7rem;
 }
 
 .popin-remerciement {
