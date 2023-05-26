@@ -12,15 +12,17 @@
     padding-inline: 1rem;
     padding-block: 20rem;
 
-    .popin-logo {
+    .popin-logo-bis {
         position: absolute;
-        top: 8.8rem;
+        top: 11.5rem;
         left: 50%;
         transform: translateX(-50%);
         z-index: 3000;
+        height: 15rem;
+        width: auto;
     }
 
-    .popin-container {
+    .popin-container-bis {
         border-radius: 3rem;
         overflow: hidden;
         margin-block: auto;
@@ -28,6 +30,7 @@
         flex-direction: column;
         justify-content: center;
         position: relative;
+        max-width: 98.5rem;
 
         .popin-close {
             position: absolute;
@@ -36,22 +39,24 @@
             cursor: pointer;
         }
 
-        .popin-header {
+        .popin-header-bis {
             background-color: var(--bg-popin-header);
             text-align: center;
-            padding: 6.9rem 1rem 4.4rem;
+            padding: 8.6rem 1rem 5.9rem;
             font-weight: 900;
 
             p {
                 font-size: 3rem;
                 line-height: calc(41 / 30);
+                position: relative;
 
                 &::after {
                     position: absolute;
                     content: "";
+                    z-index: 300;
                     width: 13.3rem;
                     height: 2.3rem;
-                    top: calc(100% + 0.3rem);
+                    top: calc(100% + 0.8rem);
                     left: 50%;
                     transform: translateX(-50%);
                     background-image: url('../img/white-card-symbol-group.svg');
@@ -66,12 +71,20 @@
     }
 }
 
-.popin-form {
+.popin-form-bis {
     display: flex;
     flex-direction: column;
     background-color: var(--bg-light);
     padding-inline: 1.1rem;
-    padding-block-start: 2rem;
+    padding-block-start: 3.7rem;
+    text-align: center;
+    margin-block-end: -2.6rem;
+    p {
+        font-size: 2.4rem;
+        line-height: calc(32 / 24);
+        font-weight: 700;
+        margin-block-end: 4.5rem;
+    }
 }
 
 body.popin-open {

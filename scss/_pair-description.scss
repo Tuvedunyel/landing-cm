@@ -20,6 +20,12 @@
         left: 50%;
         transform: translateX(-50%);
         z-index: 2;
+        height: 20rem;
+        width: auto;
+    }
+
+    .brelan-img {
+        height: 22rem;
     }
 
     p:first-of-type {
@@ -54,6 +60,23 @@
     h3 {
         font-size: 3.5rem;
         line-height: calc(37 / 35);
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "La plus populaire";
+            font-size: 2.2rem;
+            line-height: calc(23 / 22);
+            background-color: var(--quinary);
+            padding-inline: 1rem;
+            padding-block: 0.6rem;
+            border-radius: 1.1rem;
+            text-align: center;
+            width: 20rem;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: calc(100% + 20rem);
+            z-index: 4;
+        }
 
         span {
             color: var(--senary) !important;
@@ -143,6 +166,11 @@
     font-size: 2.2rem;
     text-decoration: none;
     color: var(--txt-light);
+    &:hover {
+        color: var(--quinary);
+        background-color: var(--tertiary);
+        box-shadow: 0 0 0.5rem 0.5rem rgba(255, 255, 255, 0.7);
+    }
 }
 
 .link-brelan {
@@ -150,7 +178,7 @@
     border: none;
     color: var(--txt-dark);
     padding-block: 1.5rem;
-    width: 100%;
+    width: min(100%, 36rem);
 }
 
 .card-square {
@@ -163,6 +191,10 @@
     border-radius: 1.2rem;
     margin-block-start: 3rem;
     margin-block-end: 4.1rem;
+    height: 22.3rem;
+    @media screen and (min-width:$l) {
+        height: 62.3rem;
+    }
 
     h4 {
         font-size: 2.2rem;

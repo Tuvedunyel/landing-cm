@@ -22,11 +22,13 @@
             theme = currentItem.data('theme')
             const popinTitleValue = currentItem.data('title')
             const popinLogo = $('.popin-logo')
+            const popinLogoBis = $('.popin-logo-bis')
             const popinLogoSrc = currentItem.data('image')
 
             $('#theme-input').val(theme);
             popinTitle.html(popinTitleValue)
             popinLogo.attr('src', popinLogoSrc)
+            popinLogoBis.attr('src', popinLogoSrc)
             popin.addClass(theme).addClass('open')
             popinRemerciement.addClass(theme)
             body.addClass('popin-open')
@@ -224,7 +226,7 @@
             ////////////////////////////////////  Test Validité Formulaire ////////////////////////////////////////
             if (validForm) {
                 console.log("formulaire valide")
-                // e.preventDefault()
+                e.preventDefault()
                 popinRemerciement.addClass('open')
                 popin.removeClass('open')
             } else {

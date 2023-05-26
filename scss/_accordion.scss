@@ -1,6 +1,8 @@
 .accordion {
     padding-block: 3rem;
-
+    .container {
+        max-width: 127rem;
+    }
     h2 {
         line-height: calc(58 / 44);
         font-size: 4.4rem;

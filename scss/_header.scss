@@ -31,6 +31,9 @@ header {
         align-items: center;
         gap: 4.4rem;
         line-height: calc(24 / 18);
+        a:hover {
+            color: var(--quinary);
+        }
         a, p {
             font-size: 1.8rem;
         }

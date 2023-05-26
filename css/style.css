@@ -283,6 +283,9 @@ header .header-container a::before {
     gap: 4.4rem;
     line-height: 1.3333333333;
   }
+  .header-container a:hover {
+    color: var(--quinary);
+  }
   .header-container a, .header-container p {
     font-size: 1.8rem;
   }
@@ -640,6 +643,11 @@ header .header-container a::before {
   line-height: 1.3333333333;
   margin-inline: auto;
 }
+.about-bottom:hover {
+  color: var(--quinary);
+  background-color: var(--tertiary);
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.7);
+}
 @media screen and (min-width: 64em) {
   .about-bottom {
     width: 46.7rem;
@@ -809,6 +817,13 @@ header .header-container a::before {
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+  height: 20rem;
+  width: auto;
+}
+.pair-description .brelan-img,
+.brelan-description .brelan-img,
+.square-description .brelan-img {
+  height: 22rem;
 }
 .pair-description p:first-of-type,
 .brelan-description p:first-of-type,
@@ -845,6 +860,23 @@ header .header-container a::before {
 .brelan-description h3 {
   font-size: 3.5rem;
   line-height: 1.0571428571;
+  position: relative;
+}
+.brelan-description h3::after {
+  position: absolute;
+  content: "La plus populaire";
+  font-size: 2.2rem;
+  line-height: 1.0454545455;
+  background-color: var(--quinary);
+  padding-inline: 1rem;
+  padding-block: 0.6rem;
+  border-radius: 1.1rem;
+  text-align: center;
+  width: 20rem;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(100% + 20rem);
+  z-index: 4;
 }
 .brelan-description h3 span {
   color: var(--senary) !important;
@@ -930,13 +962,20 @@ header .header-container a::before {
   text-decoration: none;
   color: var(--txt-light);
 }
+.link-pair:hover,
+.link-brelan:hover,
+.link-square:hover {
+  color: var(--quinary);
+  background-color: var(--tertiary);
+  box-shadow: 0 0 0.5rem 0.5rem rgba(255, 255, 255, 0.7);
+}
 
 .link-brelan {
   background-color: var(--bg-card-link);
   border: none;
   color: var(--txt-dark);
   padding-block: 1.5rem;
-  width: 100%;
+  width: min(100%, 36rem);
 }
 
 .card-square {
@@ -949,6 +988,12 @@ header .header-container a::before {
   border-radius: 1.2rem;
   margin-block-start: 3rem;
   margin-block-end: 4.1rem;
+  height: 22.3rem;
+}
+@media screen and (min-width: 90em) {
+  .card-square {
+    height: 62.3rem;
+  }
 }
 .card-square h4 {
   font-size: 2.2rem;
@@ -960,6 +1005,9 @@ header .header-container a::before {
 
 .accordion {
   padding-block: 3rem;
+}
+.accordion .container {
+  max-width: 127rem;
 }
 .accordion h2 {
   line-height: 1.3181818182;
@@ -1051,10 +1099,12 @@ header .header-container a::before {
 }
 .popin .popin-logo {
   position: absolute;
-  top: 8.8rem;
+  top: 11.5rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3000;
+  height: 15rem;
+  width: auto;
 }
 .popin .popin-container {
   border-radius: 3rem;
@@ -1064,6 +1114,7 @@ header .header-container a::before {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  max-width: 98.5rem;
 }
 .popin .popin-container .popin-close {
   position: absolute;
@@ -1131,6 +1182,7 @@ header .header-container a::before {
 .popin-form form {
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 
 .popin-form input {
@@ -1208,14 +1260,16 @@ body.popin-open {
   padding-inline: 1rem;
   padding-block: 20rem;
 }
-.popin-remerciement .popin-logo {
+.popin-remerciement .popin-logo-bis {
   position: absolute;
-  top: 8.8rem;
+  top: 11.5rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3000;
+  height: 15rem;
+  width: auto;
 }
-.popin-remerciement .popin-container {
+.popin-remerciement .popin-container-bis {
   border-radius: 3rem;
   overflow: hidden;
   margin-block: auto;
@@ -1223,29 +1277,32 @@ body.popin-open {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  max-width: 98.5rem;
 }
-.popin-remerciement .popin-container .popin-close {
+.popin-remerciement .popin-container-bis .popin-close {
   position: absolute;
   top: 1.7rem;
   right: 2.7rem;
   cursor: pointer;
 }
-.popin-remerciement .popin-container .popin-header {
+.popin-remerciement .popin-container-bis .popin-header-bis {
   background-color: var(--bg-popin-header);
   text-align: center;
-  padding: 6.9rem 1rem 4.4rem;
+  padding: 8.6rem 1rem 5.9rem;
   font-weight: 900;
 }
-.popin-remerciement .popin-container .popin-header p {
+.popin-remerciement .popin-container-bis .popin-header-bis p {
   font-size: 3rem;
   line-height: 1.3666666667;
+  position: relative;
 }
-.popin-remerciement .popin-container .popin-header p::after {
+.popin-remerciement .popin-container-bis .popin-header-bis p::after {
   position: absolute;
   content: "";
+  z-index: 300;
   width: 13.3rem;
   height: 2.3rem;
-  top: calc(100% + 0.3rem);
+  top: calc(100% + 0.8rem);
   left: 50%;
   transform: translateX(-50%);
   background-image: url("../img/white-card-symbol-group.svg");
@@ -1255,12 +1312,20 @@ body.popin-open {
   display: flex;
 }
 
-.popin-form {
+.popin-form-bis {
   display: flex;
   flex-direction: column;
   background-color: var(--bg-light);
   padding-inline: 1.1rem;
-  padding-block-start: 2rem;
+  padding-block-start: 3.7rem;
+  text-align: center;
+  margin-block-end: -2.6rem;
+}
+.popin-form-bis p {
+  font-size: 2.4rem;
+  line-height: 1.3333333333;
+  font-weight: 700;
+  margin-block-end: 4.5rem;
 }
 
 body.popin-open {
@@ -1277,6 +1342,9 @@ footer .footer-link {
   color: var(--txt-light);
   font-size: 2.2rem;
   line-height: 1.3636363636;
+}
+footer .footer-link:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */

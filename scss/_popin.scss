@@ -15,10 +15,12 @@
 
     .popin-logo {
         position: absolute;
-        top: 8.8rem;
+        top: 11.5rem;
         left: 50%;
         transform: translateX(-50%);
         z-index: 3000;
+        height: 15rem;
+        width: auto;
     }
 
     .popin-container {
@@ -29,6 +31,7 @@
         flex-direction: column;
         justify-content: center;
         position: relative;
+        max-width: 98.5rem;
 
         .popin-close {
             position: absolute;
@@ -106,6 +109,7 @@
 .popin-form form {
     display: flex;
     flex-direction: column;
+    text-align: left;
 }
 
 .popin-form input {
